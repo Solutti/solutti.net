@@ -1,8 +1,8 @@
-import Site from "./site/page";
+import Site from "./site/site";
 import Aviso from "./aviso/page";
+import { produção } from "./config";
 
 export default function Home() {
-  var produção:any = false;
   return (
     <main>
       {produção == true ? <Site/> : <Aviso/>}
