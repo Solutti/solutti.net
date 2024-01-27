@@ -16,7 +16,7 @@ import FooterMenu from "../header/footer";
 
 export default function Footer() {
   return (
-    <div className="flex bg-gray-dark items-center justify-center flex-col w-screen">
+    <div className="flex bg-gray-dark items-center justify-center flex-col w-screen" id="contato">
 
       {/* INÍCIO - Redes sociais */}
       <div className="bg-lilas h-20 flex w-full flex-row justify-center">
