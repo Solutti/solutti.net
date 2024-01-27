@@ -101,7 +101,7 @@ const Hamburger: React.FC = () => {
 
       {/* Menu para Versão Mobile */}
       {isMobileMenuOpen && (
-        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700 pt-20'>
+        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700 pt-10'>
           {menuData.map((item, index) => (
             <MenuItem key={index} item={item} />
           ))}
