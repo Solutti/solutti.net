@@ -20,19 +20,17 @@ interface MenuItemProps {
 
 interface SubmenuProps {
   items?: SubmenuItem[];
-  isOpen: boolean;
 }
 
-const Submenu: React.FC<SubmenuProps> = ({ items, isOpen }) => (
+const Submenu: React.FC<SubmenuProps> = ({ items }) => (
   <ul
-    className={` p-2 rounded-lg shadow-lg relative ${
-      isOpen ? 'block' : 'hidden'
-    }`}
+    className="w-full p-2 relative justify-center items-center flex flex-col"
   >
     {items?.map((item, index) => (
-      <li key={index}>
-        <Link href={item.path} className='hover:text-lilas'>
+      <li key={index} className='w-full flex items-center justify-center'>
+        <Link href={item.path} className='hover:text-lilas text-base py-5 w-full flex flex-col items-center justify-center bg-lilas'>
           {item.label}
+          <div className=" w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
         </Link>
       </li>
     ))}
@@ -42,40 +40,34 @@ const Submenu: React.FC<SubmenuProps> = ({ items, isOpen }) => (
 const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsSubmenuOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsSubmenuOpen(false);
-  };
-
   return (
     <li
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className='relative'
+      className='relative justify-center flex flex-col'
     >
-      <div className='cursor-pointer'>
+      <div className='cursor-pointer justify-center flex'>
         {item.submenu ? (
-          <div
-            className='flex flex-row items-center hover:text-lilas'
-            onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
-          >
-            {item.label}
-            {isSubmenuOpen ? (
-              <GrFormUp className='ml-1' />
-            ) : (
-              <GrFormDown className='ml-1' />
-            )}
-          </div>
+        <div className='py-5 w-full flex flex-col items-center justify-center'>
+            <div className='hover:text-lilas text-base flex flex-row items-center justify-center'
+                    onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+                >
+                {item.label}
+                {isSubmenuOpen ? (
+                <GrFormUp className='ml-1' />
+                ) : (
+                <GrFormDown className='ml-1' />
+                )}
+                    
+            </div>
+            <div className="w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
+        </div>
         ) : (
-          <Link href={item.path} className='hover:text-lilas'>
+          <Link href={item.path} className='hover:text-lilas text-base py-5 w-full flex flex-col items-center justify-center'>
             {item.label}
+            <div className="w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
           </Link>
         )}
       </div>
-      {item.submenu && isSubmenuOpen && <Submenu items={item.submenu} isOpen={isSubmenuOpen} />}
+      {item.submenu && isSubmenuOpen && <Submenu items={item.submenu} />}
     </li>
   );
 };
@@ -109,7 +101,7 @@ const Hamburger: React.FC = () => {
 
       {/* Menu para Versão Mobile */}
       {isMobileMenuOpen && (
-        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light p-2 w-screen ease-in-out duration-700'>
+        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700'>
           {menuData.map((item, index) => (
             <MenuItem key={index} item={item} />
           ))}
