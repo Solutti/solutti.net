@@ -44,7 +44,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
     <li
       className='relative justify-center flex flex-col'
     >
-      <div className='cursor-pointer justify-center flex'>
+      <div className='cursor-pointer justify-center'>
         {item.submenu ? (
         <div className='py-5 w-full flex flex-col items-center justify-center'>
             <div className='hover:text-lilas text-base flex flex-row items-center justify-center'
@@ -93,7 +93,7 @@ const Hamburger: React.FC = () => {
       <MobileMenuButton onClick={handleMobileMenuToggle} />
 
       {/* Menu para Desktop e Tablet */}
-      <ul className='hidden md:flex flex-row space-x-5 justify-center items-center '>
+      <ul className='hidden md:flex flex-row space-x-5 justify-center items-center'>
         {menuData.map((item, index) => (
           <MenuItem key={index} item={item} />
         ))}
@@ -101,7 +101,7 @@ const Hamburger: React.FC = () => {
 
       {/* Menu para Versão Mobile */}
       {isMobileMenuOpen && (
-        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700'>
+        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700 pt-20'>
           {menuData.map((item, index) => (
             <MenuItem key={index} item={item} />
           ))}
