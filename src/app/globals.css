@@ -15,12 +15,24 @@
   max-width: 1280px;
   display: flex;
   overflow: hidden;
+  padding: 10px;
 }
 
-/* @media screen and (max-width: 768px) {
+.menu{
+  display: block;
+}
+.hamburger{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
   .container{
-    width: 100% !important;
+    width: 100vw !important;
     flex-direction: column !important;
   }
 }
-*/

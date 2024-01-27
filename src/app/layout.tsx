@@ -4,6 +4,7 @@ import { Anek_Gujarati } from "next/font/google";
 import { produção } from "./config";
 import Header from "./componets/header/header";
 import Footer from "./componets/footer/footer";
+import { WhatsApp } from "./componets/addons/whatsapp";
 
 const anek_gujarati = Anek_Gujarati({ subsets: ["gujarati"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <>
         <Header/>
         <body className={anek_gujarati.className}>{children}</body>
+        <WhatsApp/>
         <Footer/>
       </>
       }    
