@@ -1,4 +1,4 @@
-import { QuemSomos } from "../componets/sections/QuemSomos";
+import { QuemSomos } from "../componets/sections/about";
 import { Hero } from "../componets/sections/hero";
 import { Portfolio } from "../componets/sections/portfolio";
 import { Presenca } from "../componets/sections/presenca";
