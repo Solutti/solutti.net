@@ -1,10 +1,17 @@
-"use client"
+"use client" // ---> Renderiza do lado do cliente 
+
+// Extensões
 import Link from 'next/link';
 import { useState } from 'react';
+
+// Arquivo de conf do menu "Links"
 import menuData from '@/app/data/menuData';
+
+// Icons
 import { GrFormDown, GrFormUp } from 'react-icons/gr';
 import { MdDensityMedium } from 'react-icons/md';
 
+// Typagem
 interface SubmenuItem {
   label: string;
   path: string;
@@ -21,6 +28,8 @@ interface MenuItemProps {
 interface SubmenuProps {
   items?: SubmenuItem[];
 }
+
+// ----> LINKS DO MENU DENTRO DO ARQUIVO data/menuData.ts <------- //
 
 const Submenu: React.FC<SubmenuProps> = ({ items }) => (
   <ul

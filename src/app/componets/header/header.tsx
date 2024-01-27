@@ -1,9 +1,14 @@
+// Extensões 
 import Image from "next/image";
+
+// Arquivos
 import Logo from "../../../../public/logo/logo.png";
 
-import { MdDensityMedium } from "react-icons/md";
+// Components
 import Menu from "./menu";
 import Hamburger from "./hamburger";
+
+// ----> LINKS DO MENU DENTRO DO ARQUIVO data/menuData.ts <------- //
 
 export default function Header() {
 

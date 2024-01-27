@@ -1,4 +1,6 @@
-import { numero, whatsapp } from "@/app/config";
+import { numero, whatsapp } from "@/app/config"; //----> Arquivo de conf do site 
+
+// Arquivos
 import Logo from "../../../../public/whatsapp/logo.png"
 import Image from "next/image";
 
