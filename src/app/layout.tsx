@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Anek_Gujarati } from "next/font/google";
 import { produção } from "./config";
@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Solutti Networks",
   description: "Criando conexões, simplificando soluções",
 };
+
+export const viewport: Viewport = {
+  themeColor: '#D2D7DC',
+}
 
 export default function RootLayout({
   children,

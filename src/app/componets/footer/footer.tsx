@@ -91,8 +91,8 @@ export default function Footer() {
       </div>
 
       {/* INÍCIO - Copyright */}
-      <div className=" w-screen h-10 flex items-center justify-center">
-        <p className=" font-normal text-sm text-gray-light cursor-default">&copy; 2023-{new Date().getFullYear()} Solutti Networks. Todos os direitos reservados.</p>
+      <div className=" w-screen flex items-center justify-center p-5 mt-10">
+        <p className=" font-normal text-sm text-gray-light cursor-default text-center mb-5">&copy; 2023-{new Date().getFullYear()} Solutti Networks. Todos os direitos reservados.</p>
       </div>
       {/* FIM - Copyright */}
     </div>
