@@ -14,7 +14,7 @@ import Footer from "../componets/footer/footer";
 
 export default function Site() {
   return (
-    <main className="flex min-h-screen min-w-screen flex-col items-center justify-center bg-primary">
+    <main className="flex min-h-screen min-w-screen flex-col items-center justify-center">
       <Header/> {/* Sessão dentro de componets/header/header.tsx */}
       <Hero/> {/* Sessão dentro de componets/sections/hero.tsx */}
       <QuemSomos/> {/* Sessão dentro de componets/sections/about.tsx */}
