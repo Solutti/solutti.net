@@ -3,7 +3,7 @@
 export const produção:any = true; // "true" para exibir site "false" para exibir página AVISO
 
 // Whatsapp
-export const numero:any = "51999999999"; // Apenas número
+export const numero:any = "5125000250"; // Apenas número
 export const whatsapp:any = true; // "true" para exibir na página "false" para remover
 
 // Social URL
