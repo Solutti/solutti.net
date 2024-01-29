@@ -18,7 +18,7 @@ export default function Header() {
         {/* Logotipo */}
         <div className="flex items-start w-[50%]">
           <a href="/" aria-label="Logo solutti">
-            <Image src={Logo} alt="Logotipo Solutti Networks" className="overflow-hidden w-36"/>
+            <Image src={Logo} alt="Logotipo Solutti Networks" className="overflow-hidden w-[128px] bg-contain bg-center"/>
           </a>
         </div>
         <div className="flex w-[50%] items-center justify-end px-5">
