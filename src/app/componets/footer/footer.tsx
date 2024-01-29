@@ -1,5 +1,3 @@
-"use client" // Renderizar componente do lado do cliente
-
 import { cnpj, email, endereco, facebook, google, instagram, linkedin, slogan, telefone } from "@/app/config"; // Arquivo de configuração das páginas
 
 // Extensões
@@ -16,7 +14,7 @@ import FooterMenu from "../header/footer";
 
 export default function Footer() {
   return (
-    <div className="flex bg-gray-dark items-center justify-center flex-col w-screen" id="contato">
+    <div className="flex bg-gray-dark items-center justify-center flex-col w-screen">
 
       {/* INÍCIO - Redes sociais */}
       <div className="bg-lilas h-20 flex w-full flex-row justify-center">
@@ -63,7 +61,7 @@ export default function Footer() {
         {/* FIM - Páginas importantes */}
 
         {/* INÍCIO - Contato */}
-        <div className="flex flex-col py-5 relative">
+        <div className="flex flex-col py-5 relative" id="contato">
           <div className=" max-h-20 h-20 flex flex-col justify-end">
             <h2 className="text-lilas cursor-default font-bold">Contato</h2>
             <div className=" w-10 border-b-4 border-b-lilas my-2"/> {/* Divider */}

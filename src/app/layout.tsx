@@ -6,14 +6,6 @@ import "./globals.css";
 // Fonts
 import { Anek_Gujarati } from "next/font/google";
 
-// Arquivo de config site
-import { produção } from "./config";
-
-// Componentes
-import Header from "./componets/header/header";
-import Footer from "./componets/footer/footer";
-import { WhatsApp } from "./componets/addons/whatsapp";
-
 const anek_gujarati = Anek_Gujarati({ subsets: ["gujarati"] });
 
 export const metadata: Metadata = {
@@ -32,16 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {produção != true ? 
-        <body className={anek_gujarati.className}>{children}</body>
-      : 
-      <>
-        <Header/>
-        <body className={anek_gujarati.className}>{children}</body>
-        <WhatsApp/>
-        <Footer/>
-      </>
-      }    
+      <body className={anek_gujarati.className}>{children}</body>
     </html>
   );
 }

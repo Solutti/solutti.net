@@ -1,7 +1,6 @@
-
 // Páginas
 import Site from "./site/site"; // ---> Página inícial Site
-import Aviso from "./aviso/page"; // ---> Página Aviso | Manutenção
+import Aviso from "./aviso/aviso"; // ---> Página Aviso | Manutenção
 
 // Config
 import { produção } from "./config"; // ---> Arquivo de config do site
