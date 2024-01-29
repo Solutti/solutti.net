@@ -83,7 +83,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
 
 const MobileMenuButton: React.FC<{ onClick: () => void }> = ({ onClick }) => (
   <div className='cursor-pointer md:hidden'>
-    <button onClick={onClick} className='focus:outline-none'>
+    <button onClick={onClick} className='focus:outline-none' aria-label="Menu" title='Menu'>
       <MdDensityMedium size={24} />
     </button>
   </div>
