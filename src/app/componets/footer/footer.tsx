@@ -23,9 +23,9 @@ export default function Footer() {
             <div className="text-lg cursor-default font-bold">Siga nas redes sociais:</div> {/* CTA - Título da section */}
           </div>
           <div className="flex items-center justify-end w-[50%] space-x-5">
-            <a href={facebook} className={facebook != "" ? " block" : " hidden"} target="_blank"><FaFacebookF size={20}/></a> {/* Facebook */}
-            <a href={instagram} className={instagram != "" ? " block" : " hidden"} target="_blank"><FaInstagram size={24}/></a> {/* Instagram */}
-            <a href={linkedin} className={linkedin != "" ? " block" : " hidden"} target="_blank"><FaLinkedinIn size={24}/></a> {/* LinkedIn */}
+            <a href={facebook} className={facebook != "" ? " block" : " hidden"} target="_blank" aria-label="Nossa página no Facebook"><FaFacebookF size={20}/></a> {/* Facebook */}
+            <a href={instagram} className={instagram != "" ? " block" : " hidden"} target="_blank" aria-label="Siga Solutti no Instagram"><FaInstagram size={24}/></a> {/* Instagram */}
+            <a href={linkedin} className={linkedin != "" ? " block" : " hidden"} target="_blank" aria-label="Nosso LinkedIn "><FaLinkedinIn size={24}/></a> {/* LinkedIn */}
           </div>
         </div>
       </div>
