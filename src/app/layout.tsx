@@ -6,6 +6,11 @@ import "./globals.css";
 // Fonts
 import { Anek_Gujarati } from "next/font/google";
 
+// Components
+import Header from "./componets/header/header";
+import { WhatsApp } from "./componets/addons/whatsapp";
+import Footer from "./componets/footer/footer";
+
 const anek_gujarati = Anek_Gujarati({ subsets: ["gujarati"] });
 
 export const metadata: Metadata = {
@@ -24,7 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={anek_gujarati.className}>{children}</body>
+      <body className={anek_gujarati.className}>
+        <Header/> {/* Sessão dentro de componets/header/header.tsx */}
+        {children}
+        <WhatsApp/> {/* Sessão dentro de componets/addons/whatsapp.tsx */}
+        <Footer/> {/* Sessão dentro de componets/footer/footer.tsx */}
+      </body>
     </html>
   );
 }
