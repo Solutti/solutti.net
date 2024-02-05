@@ -10,6 +10,7 @@ import { Anek_Gujarati } from "next/font/google";
 import Header from "./componets/header/header";
 import { WhatsApp } from "./componets/addons/whatsapp";
 import Footer from "./componets/footer/footer";
+import { produção } from "./config";
 
 const anek_gujarati = Anek_Gujarati({ subsets: ["gujarati"] });
 
@@ -30,10 +31,20 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={anek_gujarati.className}>
-        <Header/> {/* Sessão dentro de componets/header/header.tsx */}
+        {produção == true ? 
+        <Header/> // Sessão dentro de componets/header/header.tsx
+        :
+        <></>
+        }
         {children}
-        <WhatsApp/> {/* Sessão dentro de componets/addons/whatsapp.tsx */}
-        <Footer/> {/* Sessão dentro de componets/footer/footer.tsx */}
+        {produção == true ?
+        <>
+          <WhatsApp/> {/* Sessão dentro de componets/addons/whatsapp.tsx */}
+          <Footer/> {/* Sessão dentro de componets/footer/footer.tsx */}
+        </>
+        :
+        <></>
+        }
       </body>
     </html>
   );
