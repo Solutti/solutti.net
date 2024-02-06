@@ -25,13 +25,15 @@ export function Portfolio(){
                 </div>
                 <div className="w-full p-2">
                     <Accordion type="single" collapsible className=" w-full">
-                        { servicesData.map( (id) =>
+                        { servicesData.map( (id) => 
+                        <div key={id.id}>
                             <AccordionItem value={id.id}>
                                 <AccordionTrigger className=" text-start">{id.name}</AccordionTrigger>
                                 <AccordionContent className=" text-base font-sans font-regular text-gray">
                                 {id.description}
                                 </AccordionContent>
                             </AccordionItem>
+                        </div>
                         )}
                     </Accordion>
                 </div>
