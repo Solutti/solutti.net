@@ -14,7 +14,8 @@ export function Presenca(){
                 </div>
                 <div className="w-[50%] flex flex-col">
                     { presencaData.map( (items) =>
-                        <Map 
+                        <Map
+                        key={items.id} 
                         estado={items.estado} 
                         items={items.data}
                         />
