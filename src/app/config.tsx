@@ -1,6 +1,6 @@
 
 // Página de manutenção
-export const produção:any = false; // "true" para exibir site "false" para exibir página AVISO
+export const produção:any = true; // "true" para exibir site "false" para exibir página AVISO
 
 // Whatsapp
 export const numero:any = "5125000250"; // Apenas número

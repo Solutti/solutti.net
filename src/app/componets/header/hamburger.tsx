@@ -37,7 +37,8 @@ const Submenu: React.FC<SubmenuProps> = ({ items }) => (
   >
     {items?.map((item, index) => (
       <li key={index} className='w-full flex items-center justify-center'>
-        <Link href={item.path} className='hover:text-lilas text-base py-5 w-full flex flex-col items-center justify-center bg-lilas'>
+        <Link href={item.path} className='hover:text-lilas text-base py-5 
+        w-full flex flex-col items-center justify-center bg-lilas'>
           {item.label}
           <div className=" w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
         </Link>
@@ -56,7 +57,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
       <div className='cursor-pointer justify-center'>
         {item.submenu ? (
         <div className='py-5 w-full flex flex-col items-center justify-center'>
-            <div className='hover:text-lilas text-base flex flex-row items-center justify-center'
+            <div className='hover:text-lilas text-base flex flex-row 
+            items-center justify-center'
                     onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
                 >
                 {item.label}
@@ -70,7 +72,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
             <div className="w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
         </div>
         ) : (
-          <Link href={item.path} className='hover:text-lilas text-base py-5 w-full flex flex-col items-center justify-center'>
+          <Link href={item.path} className='hover:text-lilas text-base 
+          py-5 w-full flex flex-col items-center justify-center'>
             {item.label}
             <div className="w-full border-b-2 mt-2 border-b-lilas"/> {/* Divider */}
           </Link>
@@ -81,9 +84,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
   );
 };
 
+// Button Hamburger
 const MobileMenuButton: React.FC<{ onClick: () => void }> = ({ onClick }) => (
-  <div className='cursor-pointer md:hidden'>
-    <button onClick={onClick} className='focus:outline-none' aria-label="Menu" title='Menu'>
+  <div className='cursor-pointer'>
+    <button onClick={onClick} className='focus:outline-none' aria-label="Menu" 
+    title='Menu'>
       <MdDensityMedium size={24} />
     </button>
   </div>
@@ -97,20 +102,15 @@ const Hamburger: React.FC = () => {
   };
 
   return (
-    <nav className='flex flex-row hamburger'>
+    <nav className='flex hamburger'>
       {/* Botão de Hambúrguer para Versão Mobile */}
       <MobileMenuButton onClick={handleMobileMenuToggle} />
 
-      {/* Menu para Desktop e Tablet */}
-      <ul className='hidden md:flex flex-row space-x-5 justify-center items-center'>
-        {menuData.map((item, index) => (
-          <MenuItem key={index} item={item} />
-        ))}
-      </ul>
-
       {/* Menu para Versão Mobile */}
       {isMobileMenuOpen && (
-        <ul className='md:hidden flex flex-col absolute top-20 left-0 bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700 pt-10'>
+        <ul className='md:hidden flex flex-col absolute top-20 left-0 
+        bg-gray-light pb-20 rounded-b-lg p-2 w-screen ease-in-out duration-700 
+        pt-10'>
           {menuData.map((item, index) => (
             <MenuItem key={index} item={item} />
           ))}

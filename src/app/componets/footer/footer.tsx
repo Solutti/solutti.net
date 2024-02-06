@@ -18,14 +18,14 @@ export default function Footer() {
 
       {/* INÍCIO - Redes sociais */}
       <div className="bg-lilas h-20 flex w-full flex-row justify-center">
-        <div className="center w-full">
+        <div className="center-row w-full">
           <div className="flex items-center w-[50%]">
-            <div className="text-lg cursor-default font-bold">Siga nas redes sociais:</div> {/* CTA - Título da section */}
+            <div className="text-lg text-white cursor-default font-bold">Siga nas redes sociais:</div> {/* CTA - Título da section */}
           </div>
           <div className="flex items-center justify-end w-[50%] space-x-5">
-            <a href={facebook} className={facebook != "" ? " block" : " hidden"} target="_blank" aria-label="Nossa página no Facebook"><FaFacebookF size={20}/></a> {/* Facebook */}
-            <a href={instagram} className={instagram != "" ? " block" : " hidden"} target="_blank" aria-label="Siga Solutti no Instagram"><FaInstagram size={24}/></a> {/* Instagram */}
-            <a href={linkedin} className={linkedin != "" ? " block" : " hidden"} target="_blank" aria-label="Nosso LinkedIn "><FaLinkedinIn size={24}/></a> {/* LinkedIn */}
+            <a href={facebook} className={facebook != "" ? " block text-white hover:text-gray-dark" : " hidden"} target="_blank" aria-label="Nossa página no Facebook"><FaFacebookF size={20}/></a> {/* Facebook */}
+            <a href={instagram} className={instagram != "" ? " block text-white hover:text-gray-dark" : " hidden"} target="_blank" aria-label="Siga Solutti no Instagram"><FaInstagram size={24}/></a> {/* Instagram */}
+            <a href={linkedin} className={linkedin != "" ? " block text-white hover:text-gray-dark" : " hidden"} target="_blank" aria-label="Nosso LinkedIn "><FaLinkedinIn size={24}/></a> {/* LinkedIn */}
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function Footer() {
             <h2 className="text-lilas cursor-default font-bold">Contato</h2>
             <div className=" w-10 border-b-4 border-b-lilas my-2"/> {/* Divider */}
           </div>
-
+          <div className=" text-sm font-sans font-bold text-green cursor-default hidden">Transforme sua experiência de conectividade</div>
           {/* INÍCIO - Links */}
           <div className="flex flex-col space-y-4 mt-5">
             <div className="flex flex-row space-x-2 justify-start items-center pr-20"> {/* Endereço */}

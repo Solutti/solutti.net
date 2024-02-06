@@ -19,7 +19,7 @@ interface SubmenuProps {
 // ----> LINKS DO MENU DENTRO DO ARQUIVO data/menuData.ts <------- //
 
 const Submenu: React.FC<SubmenuProps> = ({ items }) => (
-  <ul className='bg-secondary p-2 rounded-lg shadow-lg absolute'>
+  <ul className='bg-secondary p-2 rounded-lg space-y-2 shadow-lg absolute'>
     {items.map((item: any, index: any) => (
       <li key={index}>
         <Link href={item.path} className='hover:text-lilas'>
