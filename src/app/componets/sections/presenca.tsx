@@ -2,9 +2,6 @@
 // Arquivo de config @/app/data/presenca.ts
 import presencaData from "@/app/data/presenca"
 import Map from "../addons/map"
-import Image from "next/image"
-import MAP from "../../../../public/map/map.png"
-import Animation from "../../../../public/map/data.json"
 
 // Extensões
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
