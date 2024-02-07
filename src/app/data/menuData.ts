@@ -4,8 +4,8 @@ const menuData = [
     label: 'Quem somos', // Nome da sessão
     path: '#quemSomos', // Link "não recomendado"
     submenu: [
-      { label: 'O que fazemos', path: '#' }, // Itens do submenu com link ID
-      { label: 'Por que escolher', path: '#' }, // Itens do submenu com link ID
+      { label: 'O que fazemos', path: '#fazemos' }, // Itens do submenu com link ID
+      { label: 'Por que escolher', path: '#escolher' }, // Itens do submenu com link ID
       // Adicione mais itens conforme necessário
     ],
   },
