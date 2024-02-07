@@ -1,6 +1,4 @@
 'use client'
-// Arquivo de conf @/app/data/about.ts
-import aboutData from "@/app/data/about";
 
 // Extenções
 import Image from "next/image";
@@ -9,9 +7,28 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 // Arquivos
 import Selo from "../../../../public/logo/selo.png"
 import { Carrossel } from "../addons/carrossel/carrossel";
+import { useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import Speed from "../../../../public/speed/speed.json";
 
 
 export function QuemSomos(){
+
+    const mapRef:any = useRef<Player>(null);
+
+    const [isVisible, setIsVisible] = useState(false);
+    const { ref, inView } = useInView({
+        threshold: 0.5, // Porcentagem da div visível para disparar a animação
+    });
+
+    // Se a div estiver visível, define isVisible como true
+    if (inView) {
+        mapRef.current.play();
+        setTimeout(() => {
+            mapRef.current.pause();
+        }, 1700);
+    }
+
     return(
         <div className="min-h-screen w-full flex items-center flex-col justify-center" id="quemSomos">
             {/*QUEM SOMOS*/}
@@ -27,14 +44,14 @@ export function QuemSomos(){
                 </div>
             </div>
             {/*O QUE FAZEMOS*/}
-            <div className=" bg-lilas flex flex-1 w-full items-center justify-center" id="fazemos">
+            <div ref={ref} className=" bg-lilas flex flex-1 w-full items-center justify-center" id="fazemos">
                 <div className=" center flex flex-1 flex-row items-center gap-20">
                     <div className=" flex flex-col gap-6 w-[100%] lg:w-[50%]">
                         <div className=" font-sans font-bold text-4xl text-green">O que fazemos</div>
                         <div className=" text-base font-sans font-regular text-white">Com velocidade, performance, segurança, proteção e estabilidade, nosso diferencial é oferecer planos flexíveis e personalizados de acordo com a necessidade de cada empresa, elaborados sob medida para garantir o sucesso de todos.</div>
                     </div>
                     <div className="w-[100%] lg:w-[50%]">
-                    <Player autoplay loop={false} src="https://lottie.host/422b6a97-c3dd-49e8-89b5-39180594de7e/ggdR1Fdd5B.json" style={{ height: '300px', width: '300px' }}/>
+                    <Player loop={false} ref={mapRef} src={Speed} style={{ height: '300px', width: '300px' }}/>
                     </div>
                 </div>
             </div>

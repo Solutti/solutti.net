@@ -13,7 +13,7 @@ import aboutData from "@/app/data/about"
 
 export function Carrossel() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 6000, stopOnInteraction: true })
   )
 
   return (
@@ -28,7 +28,7 @@ export function Carrossel() {
           <CarouselItem key={index}>
             <div className="p-2">
               <Card>
-                <CardContent className="flex flex-col aspect-square justify-center p-6 bg-lilas rounded-lg gap-6 w-full max-h-64">
+                <CardContent className="flex flex-col aspect-square justify-center p-6 bg-lilas rounded-xl gap-6 w-full max-h-64">
                   <div className="text-2xl font-bold font-sans text-green">{items.name}</div>
                   <div className="text-base font-sans font-medium text-white">{items.description}</div>
                 </CardContent>
