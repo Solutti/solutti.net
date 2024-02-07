@@ -8,7 +8,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 // Arquivos
 import Selo from "../../../../public/logo/selo.png"
-import { Carrossel } from "../addons/carrossel";
+import { Carrossel } from "../addons/carrossel/carrossel";
 
 
 export function QuemSomos(){
@@ -46,11 +46,8 @@ export function QuemSomos(){
                             <div className=" text-lilas font-sans font-medium text-4xl normal-case">Por que escolher</div>
                             <div className=" text-lilas font-sans font-bold text-4xl capitalize">solutti networks?</div>
                         </div>
-                        <div className="w-[100%] lg:w-[50%] p-2 bg-green">
+                        <div className="flex flex-1 items-center justify-center w-[100%] lg:w-[50%] p-2 relative">
                             <Carrossel/>
-                            {aboutData.map((items) =>
-                                <div key={items.id} >{items.name}</div>
-                            )}
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 *::-webkit-scrollbar {
   width: 5px;               /* width of the entire scrollbar */
@@ -21,6 +20,7 @@
 }
 body::-webkit-scrollbar-track {
   background: #242842;        /* color of the tracking area */
+  overflow: hidden !important;
 }
 
 body::-webkit-scrollbar-thumb {
