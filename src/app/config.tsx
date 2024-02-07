@@ -8,7 +8,7 @@ export const whatsapp:any = true; // "true" para exibir na página "false" para 
 
 // Social URL
 export const instagram:any = "https://www.instagram.com/solutti_net/"; // Deixe vazio para ocultar da página
-export const facebook:any = ""; // Deixe vazio para ocultar da página
+export const facebook:any = "https://www.facebook.com/soluttinet"; // Deixe vazio para ocultar da página
 export const linkedin:any = "https://www.linkedin.com/company/soluttinet/"; // Deixe vazio para ocultar da página
 
 // Empresa

@@ -18,7 +18,7 @@ export function QuemSomos(){
             <div className=" flex flex-1 w-full items-center justify-center">
                 <div className=" center flex flex-1 flex-row max-h-96 items-center gap-20">
                     <div className="w-[100%] lg:w-[50%]">
-                        <Image src={Selo} width={800} alt="Animação de background" />
+                        <Image src={Selo} width={450} alt="Animação de background" />
                     </div>
                     <div className=" flex flex-col gap-6 w-[100%] lg:w-[50%]">
                         <div className=" font-sans font-bold text-4xl text-lilas">Quem Somos</div>
