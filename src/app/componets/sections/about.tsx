@@ -33,8 +33,8 @@ export function QuemSomos(){
         <div className="min-h-screen w-full flex items-center flex-col justify-center" id="quemSomos">
             {/*QUEM SOMOS*/}
             <div className=" flex flex-1 w-full items-center justify-center">
-                <div className=" center flex flex-1 flex-row max-h-96 items-center gap-20">
-                    <div className="w-[100%] lg:w-[50%]">
+                <div className=" center flex flex-1 flex-row items-center gap-20 lg:h-96">
+                    <div className="w-[100%] lg:w-[50%] lg:flex hidden">
                         <Image src={Selo} width={450} alt="Animação de background" />
                     </div>
                     <div className=" flex flex-col gap-6 w-[100%] lg:w-[50%]">
@@ -57,8 +57,7 @@ export function QuemSomos(){
             </div>
             {/*POR QUE ESCOLHER SOLUTTI NETWORKS?*/}
             <div className=" bg-gray-dark flex flex-1 w-full items-center justify-center py-24" id="escolher">
-                <div className=" center flex flex-1 flex-row items-center gap-20">
-                    <div className="flex flex-1 flex-row justify-center items-center">
+                <div className=" center flex flex-1 flex-row items-center justify-center">
                         <div className="w-[100%] lg:w-[50%] p-2 space-y-2">
                             <div className=" text-lilas font-sans font-medium text-4xl normal-case">Por que escolher</div>
                             <div className=" text-lilas font-sans font-bold text-4xl capitalize">solutti networks?</div>
@@ -67,7 +66,6 @@ export function QuemSomos(){
                             <Carrossel/>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )

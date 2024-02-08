@@ -37,8 +37,8 @@ export function Carrossel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className=" bg-lilas"/>
-      <CarouselNext className=" bg-lilas"/>
+      <CarouselPrevious className=" bg-lilas hidden lg:flex"/>
+      <CarouselNext className=" bg-lilas hidden lg:flex"/>
     </Carousel>
   )
 }

@@ -20,7 +20,7 @@
 }
 body::-webkit-scrollbar-track {
   background: #242842;        /* color of the tracking area */
-  overflow: hidden !important;
+  
 }
 
 body::-webkit-scrollbar-thumb {
@@ -28,21 +28,21 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: none;  /* creates padding around scroll thumb */
 }
-
+html{
+  overflow-x: hidden !important;
+}
 .center{
   max-width: 1280px !important;
   display: flex;
   overflow: hidden;
   padding: 10px;
 }
-
 .center-row{
   max-width: 1280px !important;
   display: flex;
   overflow: hidden;
   padding: 10px;
 }
-
 .menu{
   display: block;
 }
