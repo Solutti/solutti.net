@@ -14,7 +14,7 @@ import FooterMenu from "../header/footer";
 
 export default function Footer() {
   return (
-    <div className="flex bg-gray-dark items-center justify-center flex-col w-screen">
+    <div className="flex bg-white items-center justify-center flex-col w-screen">
 
       {/* INÍCIO - Redes sociais */}
       <div className="bg-lilas h-20 flex w-full flex-row justify-center">
@@ -32,7 +32,7 @@ export default function Footer() {
       {/* FIM - Redes sociais */}
 
       {/* Links */}
-      <div className="flex w-full flex-row center container justify-between min-h-128">
+      <div className="flex w-full flex-row center container justify-between min-h-70">
         
 
         {/* INÍCIO - Info empresa */}
@@ -42,8 +42,8 @@ export default function Footer() {
             <div className=" w-10 border-b-4 border-b-lilas my-2"/> {/* Divider */}
           </div>
           <div className="mt-5">
-            <p className="text-gray-light cursor-default overflow-visible">{slogan}</p> {/* Slogan */}
-            <p className="text-gray-light cursor-default overflow-visible">CNPJ {cnpj}</p> {/* CNPJ */}
+            <p className="text-gray-dark cursor-default overflow-visible">{slogan}</p> {/* Slogan */}
+            <p className="text-gray-dark cursor-default overflow-visible">CNPJ {cnpj}</p> {/* CNPJ */}
           </div>
         </div>
         {/* INÍCIO - Info empresa */}
@@ -66,20 +66,20 @@ export default function Footer() {
             <h2 className="text-lilas cursor-default font-bold">Contato</h2>
             <div className=" w-10 border-b-4 border-b-lilas my-2"/> {/* Divider */}
           </div>
-          <div className=" text-sm font-sans font-bold text-green cursor-default hidden">Transforme sua experiência de conectividade</div>
+          <div className=" text-sm font-bold text-green cursor-default hidden">Transforme sua experiência de conectividade</div>
           {/* INÍCIO - Links */}
           <div className="flex flex-col space-y-4 mt-5">
             <div className="flex flex-row space-x-2 justify-start items-center pr-20"> {/* Endereço */}
-              <FaLocationDot size={20} className="text-gray-light"/> {/* Logo */}
-              <a href={google} className={endereco != "" ? " block text-gray-light hover:text-lilas" : " hidden"} target="_blank">{endereco}</a> {/* Label */}
+              <FaLocationDot size={20} className="text-gray-dark"/> {/* Logo */}
+              <a href={google} className={endereco != "" ? " block text-gray-dark hover:text-lilas" : " hidden"} target="_blank">{endereco}</a> {/* Label */}
             </div>
             <div className="flex flex-row space-x-2 justify-start items-center"> {/* Fone */}
-              <FaPhone size={20} className="text-gray-light"/> {/* Logo */}
-              <a href={`callto:${telefone}`} className={telefone != "" ? " block text-gray-light hover:text-lilas" : " hidden"} target="_blank">{telefone}</a> {/* Label */}
+              <FaPhone size={20} className="text-gray-dark"/> {/* Logo */}
+              <a href={`callto:${telefone}`} className={telefone != "" ? " block text-gray-dark hover:text-lilas" : " hidden"} target="_blank">{telefone}</a> {/* Label */}
             </div>
             <div className="flex flex-row space-x-2 justify-start items-center"> {/* E-mail */}
-              <IoMdMail size={20} className="text-gray-light"/> {/* Logo */}
-              <a href={`mailto:${email}`} className={email != "" ? " block text-gray-light hover:text-lilas" : " hidden"} target="_blank">{email}</a> {/* Label */}
+              <IoMdMail size={20} className="text-gray-dark"/> {/* Logo */}
+              <a href={`mailto:${email}`} className={email != "" ? " block text-gray-dark hover:text-lilas" : " hidden"} target="_blank">{email}</a> {/* Label */}
             </div>
           </div>
           {/* FIM - Links */}
@@ -90,7 +90,7 @@ export default function Footer() {
 
       {/* INÍCIO - Copyright */}
       <div className=" w-screen flex items-center justify-center p-5 mt-10">
-        <p className=" font-normal text-sm text-gray-light cursor-default text-center mb-5">&copy; 2023-{new Date().getFullYear()} Solutti Networks. Todos os direitos reservados.</p>
+        <p className=" font-normal text-sm text-gray-dark cursor-default text-center mb-5">&copy; 2023-{new Date().getFullYear()} Solutti Networks. Todos os direitos reservados.</p>
       </div>
       {/* FIM - Copyright */}
     </div>

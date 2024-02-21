@@ -37,7 +37,7 @@ const Submenu: React.FC<SubmenuProps> = ({ items, isOpen }) => (
   >
     {items?.map((item, index) => (
       <li key={index}>
-        <Link href={item.path} className='text-gray-light hover:text-lilas text-base'>
+        <Link href={item.path} className='text-gray-dark hover:text-lilas text-base'>
           {item.label}
         </Link>
       </li>
@@ -55,7 +55,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
       <div className='cursor-pointer'>
         {item.submenu ? (
           <div
-            className='flex flex-row items-center text-gray-light hover:text-lilas text-base'
+            className='flex flex-row items-center text-gray-dark hover:text-lilas text-base'
             onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
           >
             {item.label}
@@ -66,7 +66,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
             )}
           </div>
         ) : (
-          <Link href={item.path} className=' text-gray-light hover:text-lilas text-base'>
+          <Link href={item.path} className=' text-gray-dark hover:text-lilas text-base'>
             {item.label}
           </Link>
         )}

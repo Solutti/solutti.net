@@ -26,7 +26,7 @@ export function Presenca(){
     }
     return(
         <div ref={ref} className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-dark py-20" id="presenca">
-            <div className=" font-sans text-base lg:text-2xl text-gray-light lg:m-24 lg:w-[50%] w-[100%] m-8 p-2 text-center">Possuímos pontos de presença no sul e sudeste do Brasil, além de conexão até Miami/USA, interligando cidades estratégicas para oferecer a melhor experiência.</div>
+            <div className="  text-base lg:text-2xl text-gray-light lg:m-24 lg:w-[50%] w-[100%] m-8 p-2 text-center">Possuímos pontos de presença no sul e sudeste do Brasil, além de conexão até Miami/USA, interligando cidades estratégicas para oferecer a melhor experiência.</div>
             <div className=" center flex flex-1 gap-20">
                 <div className="flex sm:w-[100%] lg:w-[50%] h-full">
                     <Player loop={false} ref={mapRef} src={AnimationMap} />

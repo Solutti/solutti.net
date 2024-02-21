@@ -9,6 +9,11 @@
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Anek Gujarati", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 *::-webkit-scrollbar {
   width: 5px;               /* width of the entire scrollbar */
@@ -23,6 +28,28 @@ body::-webkit-scrollbar-track {
   
 }
 
+.hero{
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(19, 19, 19, 0.5),
+    rgba(48, 48, 48, 0.6)
+  ),
+  url('../../public/hero/herobg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.about{
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(19, 19, 19, 0.5),
+    rgba(48, 48, 48, 0.6)
+  ),
+  url('../../public/about/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 body::-webkit-scrollbar-thumb {
   background-color: gray;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
