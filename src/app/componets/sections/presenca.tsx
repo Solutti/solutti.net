@@ -9,6 +9,9 @@ import AnimationMap from "../../../../public/map/animationMap.json"
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { useInView } from 'react-intersection-observer';
 
+//Framer Motion
+import { AnimatePresence, motion } from "framer-motion";
+
 export function Presenca(){
     const mapRef:any = useRef<Player>(null);
 
@@ -26,12 +29,24 @@ export function Presenca(){
     }
     return(
         <div ref={ref} className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-dark py-20" id="presenca">
-            <div className="  text-base lg:text-2xl text-gray-light lg:m-24 lg:w-[50%] w-[100%] m-8 p-2 text-center">Possuímos pontos de presença no sul e sudeste do Brasil, além de conexão até Miami/USA, interligando cidades estratégicas para oferecer a melhor experiência.</div>
+            <motion.div 
+            initial={{ opacity: 0, translateY: 40}}
+            whileInView={{opacity: 1, translateY: 0 }}
+            transition={{ duration: 1}}
+            className="  text-base lg:text-2xl text-gray-light lg:m-24 lg:w-[50%] w-[100%] m-8 p-2 text-center">Possuímos pontos de presença no sul e sudeste do Brasil, além de conexão até Miami/USA, interligando cidades estratégicas para oferecer a melhor experiência.</motion.div>
             <div className=" center flex flex-1 gap-20">
-                <div className="flex sm:w-[100%] lg:w-[50%] h-full">
+                <motion.div 
+                initial={{ opacity: 0, translateX: -200}}
+                whileInView={{opacity: 1, translateX: 0 }}
+                transition={{ duration: 1, delay: 1}}
+                className="flex sm:w-[100%] lg:w-[50%] h-full">
                     <Player loop={false} ref={mapRef} src={AnimationMap} />
-                </div>
-                <div className="w-[100%] lg:w-[50%] pb-5 flex flex-col">
+                </motion.div>
+                <motion.div 
+                initial={{ opacity: 0, translateX: 200}}
+                whileInView={{opacity: 1, translateX: 0 }}
+                transition={{ duration: 1, delay: 1}}
+                className="w-[100%] lg:w-[50%] pb-5 flex flex-col">
                     { presencaData.map( (items) =>
                         <Map
                         key={items.id} 
@@ -39,7 +54,7 @@ export function Presenca(){
                         items={items.data}
                         />
                     )}             
-                </div>
+                </motion.div>
             </div>
         </div>
     )
