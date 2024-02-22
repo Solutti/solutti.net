@@ -13,7 +13,7 @@ import Hamburger from "./hamburger";
 export default function Header() {
 
   return (
-    <div className="flex bg-white w-screen h-24 fixed top-0 items-center justify-center z-50 overflow-visible">
+    <div className="flex bg-gray-light w-screen h-24 fixed top-0 items-center justify-center z-50 overflow-visible">
       <div className="center-row flex flex-row flex-1 px-5">
         {/* Logotipo */}
         <div className="flex items-start w-[50%]">
