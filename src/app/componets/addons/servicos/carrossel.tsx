@@ -28,7 +28,7 @@ export function PorfolioServicos() {
         {servicesData.map((items, index) => (
           <CarouselItem key={index}>
             <div className="w-full">
-              <Card className="border-none shadow-none">
+              <Card className="border-none shadow-none lg:max-w-full max-w-[40px] lg:pl-0 pl-6">
                 <CardContent className="center flex flex-1 pt-6 justify-center items-center">
                   <div className="lg:max-w-[40%] w-[100%]">
                     <Image src={`/svg/${items.img}`} alt={`Imagem ${items.name}`} width="420" height="420" className="text-lilas"/>
