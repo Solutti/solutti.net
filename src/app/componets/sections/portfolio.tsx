@@ -34,7 +34,7 @@ export function Portfolio(){
                 <motion.div
                 initial={{ opacity: 0, translateY: 40}}
                 whileInView={{opacity: 1, translateY: 0}}
-                transition={{ duration: 1, delay: 1}}
+                transition={{ duration: 1, delay: .8}}
                 >
                     <PorfolioServicos/>
                 </motion.div>

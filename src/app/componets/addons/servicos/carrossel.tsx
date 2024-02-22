@@ -20,20 +20,20 @@ export function PorfolioServicos() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full lg:max-w-4xl max-w-2xl"
+      className="relative w-[90%] max-w-4xl ml-12 p-6"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="">
+      <CarouselContent className="flex flex-1">
         {servicesData.map((items, index) => (
           <CarouselItem key={index}>
             <div className="w-full">
               <Card className="border-none shadow-none">
                 <CardContent className="center flex flex-1 pt-6 justify-center items-center">
-                  <div className="lg:max-w-[50%] w-[100%]">
+                  <div className="lg:max-w-[40%] w-[100%]">
                     <Image src={`/svg/${items.img}`} alt={`Imagem ${items.name}`} width="420" height="420" className="text-lilas"/>
                   </div>
-                  <div className="lg:max-w-[50%] w-[100%]">
+                  <div className="lg:max-w-[60%] w-[100%]">
                     <div className="text-3xl font-bold text-lilas">{items.name}</div>
                     <div className="text-base  font-regular text-gray">{items.description}</div>
                   </div>
