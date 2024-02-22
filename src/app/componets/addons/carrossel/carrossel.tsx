@@ -11,14 +11,27 @@ import {
 } from "@/components/ui/carousel"
 import aboutData from "@/app/data/about"
 
+import { useInView } from 'react-intersection-observer';
+
 export function Carrossel() {
   const plugin = React.useRef(
-    Autoplay({ delay: 6000, stopOnInteraction: true })
+    Autoplay({stopOnInteraction: true })
   )
+
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Porcentagem da div visível para disparar a animação
+  });
+
+  if (inView) {
+    plugin.current.reset
+  }else{
+    plugin.current.stop
+  }
 
   return (
     <Carousel
-      plugins={[plugin.current]}
+      ref={ref}
+      plugins={[]}
       className="w-full max-w-lg"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}

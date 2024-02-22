@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -12,15 +13,27 @@ import {
 import servicesData from "@/app/data/servicos"
 import Image from "next/image"
 
-export function PorfolioServicos() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 6000, stopOnInteraction: true })
-  )
+import { useInView } from 'react-intersection-observer';
 
+export function PorfolioServicos() {
+
+  const plugin = React.useRef(
+    Autoplay({stopOnInteraction: true })
+  )
+ 
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Porcentagem da div visível para disparar a animação
+  });
+
+  if (inView) {
+    plugin.current.reset
+  }else{
+    plugin.current.stop
+  }
   return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="relative w-[90%] max-w-4xl ml-12 p-6"
+    <Carousel ref={ref}
+      plugins={[]}
+      className="relative w-[90%] max-w-4xl ml-12 p-6 cursor-default"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
