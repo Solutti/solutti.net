@@ -12,7 +12,7 @@ import { WhatsApp } from "./componets/addons/whatsapp";
 import Footer from "./componets/footer/footer";
 import { produção } from "./config";
 
-const anek_gujarati = Anek_Gujarati({ subsets: ["gujarati"] });
+
 
 export const metadata: Metadata = {
   title: "Solutti Networks", // Título da página
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={anek_gujarati.className}>
+      <body>
         {produção == true ? 
         <Header/> // Sessão dentro de componets/header/header.tsx
         :
