@@ -15,11 +15,11 @@ const presencaData = [
       },
       { 
         cidade: 'Porto Alegre', // Nome da cidade
-        descrição: '(Data Center Scala, em ativação, primeiro trimestre de 2024)' // Descrição
+        descrição: '(Data Center Scala)' // Descrição
       },
       { 
         cidade: 'Porto Alegre', // Nome da cidade
-        descrição: '(Data Center ELEA POA2, em ativação, primeiro trimestre de 2024)' // Descrição
+        descrição: '(Data Center ELEA POA2)' // Descrição
       },
       { 
         cidade: 'Taquara', // Nome da cidade
@@ -45,7 +45,7 @@ const presencaData = [
     data: [
       { 
         cidade: 'Curitiba', // Nome da cidade
-        descrição: '(Data Center ELEA CTA1, planejado, primeiro trimestre de 2024)' // Descrição
+        descrição: '(Data Center ELEA CTA1)' // Descrição
       },
     ],
   },
@@ -71,7 +71,7 @@ const presencaData = [
     data: [
       { 
         cidade: 'Miami', // Nome da cidade
-        descrição: '(Data Center Digital Realty, planejado, segundo trimestre de 2024)' // Descrição
+        descrição: '(Data Center Digital Realty)' // Descrição
       },
     ],
   },
