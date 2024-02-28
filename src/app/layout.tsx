@@ -12,6 +12,10 @@ import { WhatsApp } from "./componets/addons/whatsapp";
 import Footer from "./componets/footer/footer";
 import { produção } from "./config";
 
+//Vercel dados
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 
 export const metadata: Metadata = {
@@ -31,6 +35,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <Analytics/>
+        <SpeedInsights/>
         {produção == true ? 
         <Header/> // Sessão dentro de componets/header/header.tsx
         :
