@@ -1,6 +1,15 @@
 const menuData = [
   // Menu com submenu
   {
+    label: 'Serviços', // Nome da sessão
+    path: '#', // Link "não recomendado"
+    submenu: [
+      { label: 'Internet Residencial', path: 'https://residencial.solutti.net' }, // Itens do submenu com link ID
+      //{ label: 'Por que escolher', path: '#escolher' }, // Itens do submenu com link ID
+      // Adicione mais itens conforme necessário
+    ],
+  },
+  {
     label: 'Quem somos', // Nome da sessão
     path: '#quemSomos', // Link "não recomendado"
     submenu: [
