@@ -35,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/e0aeb777-2dc4-4651-bf36-597b452260fd-loader.js" ></script>
         <Analytics/>
         <SpeedInsights/>
         {produção == true ? 
